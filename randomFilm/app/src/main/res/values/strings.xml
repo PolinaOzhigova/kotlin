@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">randomFilm</string>
+    <string name="no_films">Фильмов больше нет</string>
+    <string-array name="movies">
+        <item>Маленькие женщины</item>
+        <item>Дневник памяти</item>
+        <item>Война будущего</item>
+        <item>Боги Египта</item>
+        <item>Монте Карло</item>
+        <item>История Золушки</item>
+        <item>Отверженные</item>
+        <item>Цыпочка</item>
+        <item>Добейся успеха</item>
+        <item>Украсть прощальное утро цветами обещания</item>
+        <item>Форест Гамп</item>
+        <item>Единственнму мне, кто тебя любил/Для каждой тебя что я раньше любил</item>
+        <item>Ешь Молись Люби</item>
+        <item>Моя вина</item>
+        <item>Пурпурные сердца</item>
+        <item>Из моего окна</item>
+        <item>Перед рассветом</item>
+    </string-array>
+</resources>
