@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Aviaseils_like</string>
+    <string name="select_from">Выберите город</string>
+    <string name="select_to">Выберите город</string>
+    <string-array name="cities_array">
+        <item>Иркутск</item>
+        <item>Южно-Сахалинск</item>
+        <item>Владивосток</item>
+        <item>Якутск</item>
+        <item>Красноярск</item>
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Новосибирск</item>
+        <item>Екатеринбург</item>
+        <item>Нижний Новгород</item>
+    </string-array>
+</resources>
