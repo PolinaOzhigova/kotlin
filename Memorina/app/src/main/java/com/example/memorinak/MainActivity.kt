@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private var randomArray: Array<String> = generateRandomArray()
     private var firstCard: ImageView? = null
     private var secondCard: ImageView? = null
+    private var count: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,14 +34,21 @@ class MainActivity : AppCompatActivity() {
         val layout = LinearLayout(applicationContext)
         layout.orientation = LinearLayout.VERTICAL
 
-        val params = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT)
+//        val params = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT)
+//        params.weight = 1.toFloat()
+        val params = LinearLayout.LayoutParams(
+            0,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
         params.weight = 1.toFloat()
+        params.setMargins(4, 0, 4, 0)
 
         cardViews = ArrayList()
         for (i in 0 until numberOfPairs * 2) {
             val imageView = ImageView(applicationContext).apply {
                 setImageResource(R.drawable.cows)
                 layoutParams = params
+
                 tag = randomArray[i]
                 setOnClickListener { openCard(this) }
             }
@@ -80,6 +89,7 @@ class MainActivity : AppCompatActivity() {
 
         firstCard = null
         secondCard = null
+        count = 0
 
         randomArray = generateRandomArray()
         for (i in 0 until numberOfPairs * 2) {
@@ -87,21 +97,41 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    suspend fun guessedPair(v: View) {
-        delay(500)
+    suspend fun guessedPair(firstCard: ImageView, secondCard: ImageView) {
+        delay(300)
+        count += 1
         withContext(Dispatchers.Main) {
-            v.visibility = View.INVISIBLE
-            v.isClickable = false
+            firstCard.visibility = View.INVISIBLE
+            firstCard.isClickable = false
+            secondCard.visibility = View.INVISIBLE
+            secondCard.isClickable = false
+        }
+        if(count == 8){
+            delay(100)
+            showToast("WIN!!!")
+        }
+    }
+
+    private suspend fun showToast(message: String) {
+        withContext(Dispatchers.Main) {
+            Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT).show()
         }
     }
 
     suspend fun showPair(firstCard: ImageView, secondCard: ImageView) {
-        delay(1500)
-        withContext(Dispatchers.Main) {
-            firstCard.setImageResource(R.drawable.cows)
-            secondCard.setImageResource(R.drawable.cows)
-            firstCard.isClickable = true
-            secondCard.isClickable = true
+        val tag1 = resources.getIdentifier("img${firstCard.tag}", "drawable", packageName)
+        val tag2 = resources.getIdentifier("img${secondCard.tag}", "drawable", packageName)
+        if(tag1 == tag2){
+            guessedPair(firstCard, secondCard)
+        }
+        else {
+            delay(1000)
+            withContext(Dispatchers.Main) {
+                firstCard.setImageResource(R.drawable.cows)
+                secondCard.setImageResource(R.drawable.cows)
+                firstCard.isClickable = true
+                secondCard.isClickable = true
+            }
         }
     }
 
@@ -114,21 +144,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun openCard(card: ImageView) {
-        if (firstCard == null || secondCard == null) {
-            val resourceId = resources.getIdentifier("img${card.tag}", "drawable", packageName)
-            card.setImageResource(resourceId)
+        GlobalScope.launch {
+            delay(300)
+            if (firstCard == null || secondCard == null) {
+                val resourceId = resources.getIdentifier("img${card.tag}", "drawable", packageName)
+                card.setImageResource(resourceId)
 
-            if (firstCard == null) {
-                firstCard = card
-            } else {
-                secondCard = card
-                card.isClickable = false
-
-                GlobalScope.launch {
+                if (firstCard == null) {
+                    firstCard = card
+                    card.isClickable = false
+                } else {
+                    secondCard = card
+                    card.isClickable = false
                     showPair(firstCard!!, secondCard!!)
                     firstCard = null
                     secondCard = null
-                }
+                    }
             }
         }
     }
