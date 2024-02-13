@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lesson2feb</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="weather_description">Утро -20 С\nДень -15 C\nВечер -13 C\nНочь -27 C\nВетер 2 мс</string>
+    <string name="weather_description2">Утро -10 С\nДень -7 C\nВечер -9 C\nНочь -18 C\nВетер 6 мс</string>
+    <string name="weather_description3">Утро -17 C\nДень -10 C\nВечер -13 C\nНочь -20 C\nВетер 14 мс</string>
+</resources>
