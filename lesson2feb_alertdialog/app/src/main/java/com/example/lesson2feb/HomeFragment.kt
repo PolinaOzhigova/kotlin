@@ -38,13 +38,13 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
-            MyDialog().show(childFragmentManager, "1")
+            MyDialog().show(parentFragmentManager, "1")
         }
         view.findViewById<ImageButton>(R.id.imageButton3).setOnClickListener {
-            MyDialog().show(childFragmentManager, "2")
+            MyDialog().show(parentFragmentManager, "2")
         }
         view.findViewById<ImageButton>(R.id.imageButton4).setOnClickListener {
-            MyDialog().show(childFragmentManager, "3")
+            MyDialog().show(parentFragmentManager, "3")
         }
 
 
