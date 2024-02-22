@@ -12,6 +12,7 @@ class MyDialog : DialogFragment() {
             .setItems(R.array.fragments_array) { _, item ->
                 val fragmentManager = requireActivity().supportFragmentManager
                 val transaction = fragmentManager.beginTransaction()
+                transaction.setReorderingAllowed(true)
                 when (item) {
                     0 -> transaction.replace(android.R.id.content, BlankFragment())
                     1 -> transaction.replace(android.R.id.content, BlankFragment2())
