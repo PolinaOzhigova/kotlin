@@ -37,14 +37,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
-            MyDialog().show(parentFragmentManager, "1")
-        }
-        view.findViewById<ImageButton>(R.id.imageButton3).setOnClickListener {
-            MyDialog().show(parentFragmentManager, "2")
-        }
-        view.findViewById<ImageButton>(R.id.imageButton4).setOnClickListener {
-            MyDialog().show(parentFragmentManager, "3")
+        view.findViewById<Button>(R.id.button3).setOnClickListener {
+            MyDialog().show(parentFragmentManager, "click")
         }
 
 
