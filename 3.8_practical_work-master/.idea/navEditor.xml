@@ -190,29 +190,7 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="deepLink">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="deepLink4">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="blankFragment6">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="454" />
-                            <option name="y" value="460" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

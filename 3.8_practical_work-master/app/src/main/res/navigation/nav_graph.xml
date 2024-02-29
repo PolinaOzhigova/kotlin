@@ -34,8 +34,8 @@
         android:label="fragment3"
         tools:layout="@layout/fragment3" >
         <action
-            android:id="@+id/action_blankFragment3_to_blankFragment6"
-            app:destination="@id/blankFragment6" />
+            android:id="@+id/action_blankFragment3_to_main2Activity"
+            app:destination="@id/main2Activity" />
     </fragment>
     <fragment
         android:id="@+id/blankFragment4"
@@ -60,9 +60,4 @@
         android:name="ru.samsung.itschool.myapplication.Main2Activity"
         android:label="app_bar_main2"
         tools:layout="@layout/app_bar_main2" />
-    <fragment
-        android:id="@+id/blankFragment6"
-        android:name="ru.samsung.itschool.myapplication.BlankFragment6"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" />
 </navigation>
