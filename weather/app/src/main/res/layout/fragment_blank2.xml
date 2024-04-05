@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="60px"
         android:gravity="center_horizontal"
-        android:text="Погода на 15 февраля в Иркутске"
+        android:text="@string/title2"
         android:textSize="20sp" />
 
     <LinearLayout

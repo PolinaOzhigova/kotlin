@@ -1,25 +1,23 @@
 package com.example.lesson2feb
 
-import androidx.lifecycle.ViewModelProvider
+import android.content.res.Configuration
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageButton
-import androidx.core.os.bundleOf
-import androidx.navigation.Navigation
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import java.util.Locale
 
 class HomeFragment : Fragment() {
 
     companion object {
         fun newInstance() = HomeFragment()
     }
-
-//    private lateinit var viewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,8 +44,6 @@ class HomeFragment : Fragment() {
         view.findViewById<ImageButton>(R.id.imageButton4).setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_blankFragment3)
         }
-
-
 //        val editT = view.findViewById<EditText>(R.id.editTextHome)
 //        view.findViewById<Button>(R.id.button2)
 //            .setOnClickListener {
@@ -60,7 +56,6 @@ class HomeFragment : Fragment() {
 //                    bundleOf("editTextH" to editT.text.toString())
 //                )
 //            }
-
-
     }
+
 }

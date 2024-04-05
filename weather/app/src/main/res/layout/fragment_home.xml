@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="-16, ясно"
+                android:text="@string/temperature1"
                 android:textSize="16dp" />
 
             <ImageButton
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="14, среда" />
+                android:text="@string/date1" />
         </LinearLayout>
 
         <LinearLayout
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="-5, снег"
+                android:text="@string/temperature2"
                 android:textSize="16dp" />
 
             <ImageButton
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="15, четверг" />
+                android:text="@string/date2" />
         </LinearLayout>
 
         <LinearLayout
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="-10, облачно"
+                android:text="@string/temperature3"
                 android:textSize="16dp" />
 
             <ImageButton
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="16, пятница" />
+                android:text="@string/date3" />
         </LinearLayout>
 
     </LinearLayout>
@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="60px"
-        android:text="Погода в Иркутске на три дня"
+        android:text="@string/title"
         android:textSize="20sp" />
 
 </FrameLayout>

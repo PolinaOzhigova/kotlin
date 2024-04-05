@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">lesson2feb</string>
+    <string name="title">Weather in Irkutsk for three days</string>
+    <string name="title1">Weather on February 14 in Irkutsk</string>
+    <string name="title2">Weather on February 15 in Irkutsk</string>
+    <string name="title3">Weather on February 16 in Irkutsk</string>
+    <string name="temperature1">-16, clear</string>
+    <string name="temperature2">-5, snow</string>
+    <string name="temperature3">-10, cloudy</string>
+    <string name="date1">14, wednesday</string>
+    <string name="date2">15, thursday</string>
+    <string name="date3">16, friday</string>
+    <string name="weather_description">Morning -20 С\nDay -15 C\nEvening -13 C\nNight -27 C\nWind 2 ms</string>
+    <string name="weather_description2">Morning -10 С\nDay -7 C\nEvening -9 C\nNight -18 C\nWind 6 ms</string>
+    <string name="weather_description3">Morning -17 C\nDay -10 C\nEvening -13 C\nNight -20 C\nWind 14 ms</string>
+</resources>
