@@ -7,4 +7,4 @@
 После того, как реализуете переворот карт, сделайте проверку на выигрыш (исчезли все карты).
 
 Демонстрация работы:
-<video controls src="MemorinaK.mp4" title="Memorina"></video>
+<video src='MemorinaK.mp4' width=500/>
